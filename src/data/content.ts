@@ -27,7 +27,7 @@ export const services = [
     time: "Samedi · 15h",
     description:
       "Un espace d'énergie et d'engagement pour les 15-30 ans : louange, ateliers et projets communautaires.",
-    image: "https://images.unsplash.com/photo-1523803326055-13445f07c8ed?w=640&h=480&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=640&h=480&fit=crop&q=80",
   },
 ];
 
@@ -86,7 +86,7 @@ export const events = [
   {
     month: "AVR",
     day: "11",
-    title: "Conférence de Pâques Nkolmintage",
+    title: "Conférence de Pâques Nkolmintag",
     description:
       "Trois jours de renouvellement spirituel avec des invités venus de Yaoundé et Douala.",
   },
@@ -128,9 +128,9 @@ export const events = [
 ];
 
 export const contact = {
-  address: "Rue Nkolmintage 138, Quartier Ndogpassi, Douala, Cameroun",
+  address: "Rue Nkolmintag 138, Quartier Ndogpassi, Douala, Cameroun",
   phone: "+237 6 99 42 17 58",
-  email: "contact@nkolmintage-eglise.cm",
+  email: "contact@nkolmintag-eglise.cm",
   mapEmbed:
     "https://www.openstreetmap.org/export/embed.html?bbox=9.6800%2C4.0100%2C9.7400%2C4.0700&layer=mapnik",
 };

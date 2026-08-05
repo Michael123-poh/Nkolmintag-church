@@ -58,7 +58,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 text-cream-50">
           <MountainMark className="h-9 w-9" color="#c9a24b" />
           <span className="font-sans text-lg font-semibold tracking-wide">
-            NKOLMINTAGE
+            NKT
           </span>
         </Link>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
               <span className="flex items-center gap-3 text-cream-50">
                 <MountainMark className="h-8 w-8" color="#c9a24b" />
                 <span className="font-sans text-base font-semibold tracking-wide">
-                  NKOLMINTAGE
+                  NKT
                 </span>
               </span>
               <button

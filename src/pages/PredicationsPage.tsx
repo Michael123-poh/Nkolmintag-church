@@ -27,7 +27,7 @@ export default function PredicationsPage() {
           Toutes les prédications
         </h1>
         <p className="mt-2 max-w-[55ch] font-body text-[15px] leading-tight text-ink-950/70">
-          Réécoutez les messages prêchés à Nkolmintage, semaine après semaine.
+          Réécoutez les messages prêchés à Nkolmintag, semaine après semaine.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

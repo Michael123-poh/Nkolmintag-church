@@ -10,7 +10,7 @@ export default function MountainMark({ className, color = "currentColor" }: Moun
       fill="none"
       className={className}
       role="img"
-      aria-label="Emblème Nkolmintage : montagne surmontée d'une colombe"
+      aria-label="Emblème Nkolmintag : montagne surmontée d'une colombe"
     >
       <path
         d="M32 4 L11 30 L18 30 L8 44 L56 44 L46 30 L53 30 Z"

@@ -90,7 +90,7 @@ export default function Footer() {
 
       <div className="border-t border-cream-50/10">
         <div className="mx-auto flex w-full max-w-[1320px] flex-col items-center justify-between gap-3 px-6 py-6 font-body text-xs text-cream-100/50 sm:flex-row">
-          <p>© 2026 Église Nkolmintage. Tous droits réservés.</p>
+          <p>© 2026 Église Nkolmintag. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a href="#" className="transition-colors hover:text-cream-50">
               Politique de confidentialité

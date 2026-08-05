@@ -40,12 +40,12 @@ export default function Join() {
           </h2>
           <p className="mt-3 max-w-[46ch] font-body text-[15px] leading-tight text-ink-950/70">
             Que vous cherchiez une communauté, un lieu de service ou simplement un endroit
-            pour prier, notre porte vous est ouverte à Nkolmintage.
+            pour prier, notre porte vous est ouverte à Nkolmintag.
           </p>
 
           <div className="mt-6 overflow-hidden rounded-sm border border-ink-950/10">
             <iframe
-              title="Localisation de l'église Nkolmintage à Douala"
+              title="Localisation de l'église Nkolmintag à Douala"
               src={contact.mapEmbed}
               className="h-64 w-full grayscale-[20%]"
               loading="lazy"

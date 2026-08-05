@@ -42,7 +42,7 @@ export default function Hero() {
           variants={fadeUp}
           className="max-w-[820px] font-display text-[2.5rem] font-semibold leading-[1.05] text-cream-50 sm:text-[3.4rem] lg:text-[4rem]"
         >
-          Bienvenue à Nkolmintage.
+          Bienvenue à Nkolmintag.
           <br />
           Unissez-vous à nous dans la foi.
         </motion.h1>
