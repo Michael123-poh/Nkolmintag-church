@@ -40,7 +40,10 @@ export default function Footer() {
             <ul className="mt-3 space-y-1.5">
               {nav.map((n) => (
                 <li key={n.href}>
-                  <Link to={`/${n.href}`} className="font-body text-sm transition-colors hover:text-cream-50">
+                  <Link
+                    to={n.href.startsWith("#") ? `/${n.href}` : n.href}
+                    className="font-body text-sm transition-colors hover:text-cream-50"
+                  >
                     {n.label}
                   </Link>
                 </li>

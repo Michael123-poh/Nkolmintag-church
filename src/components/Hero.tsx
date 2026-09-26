@@ -77,7 +77,7 @@ export default function Hero() {
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
             {[
-              { label: "Culte matinal", time: "09h" },
+              { label: "Culte matinal", time: "10h" },
               { label: "Culte du soir", time: "18h" },
             ].map((s) => (
               <div

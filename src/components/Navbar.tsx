@@ -23,6 +23,7 @@ export default function Navbar() {
     if (!isHome) return;
 
     const sections = nav
+      .filter((n) => n.href.startsWith("#"))
       .map((n) => document.querySelector(n.href))
       .filter((el): el is Element => !!el);
 
@@ -63,16 +64,23 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              to={isHome ? item.href : `/${item.href}`}
-              aria-current={isHome && active === item.href ? "page" : undefined}
-              className="nav-underline font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-cream-100/90 transition-colors hover:text-gold-400"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const isPageLink = !item.href.startsWith("#");
+            const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
+            const isCurrent = isPageLink
+              ? location.pathname === item.href
+              : isHome && active === item.href;
+            return (
+              <Link
+                key={item.href}
+                to={to}
+                aria-current={isCurrent ? "page" : undefined}
+                className="nav-underline font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-cream-100/90 transition-colors hover:text-gold-400"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <button
@@ -111,22 +119,26 @@ export default function Navbar() {
               </button>
             </div>
             <nav className="flex flex-1 flex-col items-start justify-center gap-8 px-10">
-              {nav.map((item, i) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.3 }}
-                >
-                  <Link
-                    to={isHome ? item.href : `/${item.href}`}
-                    onClick={() => setOpen(false)}
-                    className="font-display text-3xl text-cream-50 hover:text-gold-400"
+              {nav.map((item, i) => {
+                const isPageLink = !item.href.startsWith("#");
+                const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
+                return (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 * i, duration: 0.3 }}
                   >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      to={to}
+                      onClick={() => setOpen(false)}
+                      className="font-display text-3xl text-cream-50 hover:text-gold-400"
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </nav>
           </motion.div>
         )}

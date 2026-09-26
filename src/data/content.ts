@@ -1,30 +1,29 @@
 export const nav = [
   { label: "Accueil", href: "#accueil" },
-  { label: "Cultes", href: "#cultes" },
+  { label: "À propos", href: "#a-propos" },
+  { label: "Culte", href: "/cultes" },
   { label: "Médias", href: "#medias" },
-  { label: "Événements", href: "#evenements" },
   { label: "Nous rejoindre", href: "#rejoindre" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const services = [
   {
     title: "Culte dominical",
-    time: "Dimanche · 09h & 18h",
+    time: "Dimanche · 10h",
     description:
       "Un temps de louange, de prédication et de communion fraternelle ouvert à tous, quel que soit votre parcours de foi.",
     image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=640&h=480&fit=crop&q=80",
   },
   {
-    title: "Étude biblique",
-    time: "Mercredi · 18h",
+    title: "Écoute de bande",
+    time: "Mardi & Jeudi · 18h",
     description:
-      "Approfondir les Écritures ensemble, questions et échanges bienvenus, pour mieux vivre sa foi au quotidien.",
+      "Un temps de louange, de prédication. Nous écoutons le message du temps de la fin de William Marrion Branham, que le Seigneur nous a envoyé.",
     image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=480&fit=crop&q=80",
   },
   {
     title: "Groupe jeunesse",
-    time: "Samedi · 15h",
+    time: "1 samedi par mois · 15h",
     description:
       "Un espace d'énergie et d'engagement pour les 15-30 ans : louange, ateliers et projets communautaires.",
     image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=640&h=480&fit=crop&q=80",
@@ -34,51 +33,59 @@ export const services = [
 export const sermons = [
   {
     title: "Vivre la foi en temps de crise",
-    speaker: "Pasteur Jean-Marc Ondoa",
+    speaker: "Pasteur Branham Kamté",
     date: "27 juillet 2026",
     image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/vivre-la-foi-en-temps-de-crise.pdf",
   },
   {
     title: "L'espoir qui ne déçoit jamais",
-    speaker: "Pasteure Chantal Mbezele",
+    speaker: "Pasteur Branham Kamté",
     date: "20 juillet 2026",
     image: "https://images.unsplash.com/photo-1445445290350-18a3b86e0e5d?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/lespoir-qui-ne-decoit-jamais.pdf",
   },
   {
     title: "Bâtir sur le roc",
-    speaker: "Pasteur Jean-Marc Ondoa",
+    speaker: "Pasteur Branham Kamté",
     date: "13 juillet 2026",
     image: "https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/batir-sur-le-roc.pdf",
   },
   {
     title: "La grâce qui restaure",
-    speaker: "Pasteure Chantal Mbezele",
+    speaker: "Pasteur Branham Kamté",
     date: "6 juillet 2026",
     image: "https://images.unsplash.com/photo-1544427920-c49ccfb85579?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/la-grace-qui-restaure.pdf",
   },
   {
     title: "Marcher par la foi, non par la vue",
-    speaker: "Pasteur Emmanuel Biya Essomba",
+    speaker: "Pasteur Kamté Robert",
     date: "29 juin 2026",
     image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/marcher-par-la-foi-non-par-la-vue.pdf",
   },
   {
     title: "Le pardon qui libère",
-    speaker: "Pasteur Jean-Marc Ondoa",
+    speaker: "Pasteur Branham Kamté",
     date: "22 juin 2026",
     image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/le-pardon-qui-libere.pdf",
   },
   {
     title: "Servir avec un cœur reconnaissant",
-    speaker: "Pasteure Chantal Mbezele",
+    speaker: "Pasteur Kamté Robert",
     date: "15 juin 2026",
     image: "https://images.unsplash.com/photo-1523803326055-13445f07c8ed?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/servir-avec-un-coeur-reconnaissant.pdf",
   },
   {
     title: "La prière qui déplace les montagnes",
-    speaker: "Pasteur Emmanuel Biya Essomba",
+    speaker: "Pasteur Emmanuel Kamla",
     date: "8 juin 2026",
     image: "https://images.unsplash.com/photo-1465310477141-6fb93167a273?w=640&h=400&fit=crop&q=80",
+    pdfUrl: "/pdfs/la-priere-qui-deplace-les-montagnes.pdf",
   },
 ];
 
@@ -128,7 +135,7 @@ export const events = [
 ];
 
 export const contact = {
-  address: "Rue Nkolmintag 138, Quartier Ndogpassi, Douala, Cameroun",
+  address: "Terminus Saint-Michel, 200m après l'hôtel, Douala, Cameroun",
   phone: "+237 6 99 42 17 58",
   email: "contact@nkolmintag-eglise.cm",
   mapEmbed:

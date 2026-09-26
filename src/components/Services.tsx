@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import MountainMark from "./MountainMark";
 import { services } from "../data/content";
 
@@ -21,7 +23,7 @@ export default function Services() {
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-bordeaux">
               Vie d'église
             </p>
-            <h2 className="mt-2 font-display text-4xl font-semibold leading-tight text-ink-950 sm:text-5xl">
+            <h2 className="mt-2 font-display text-4xl font-semibold leading-[1.05] text-ink-950 sm:text-5xl">
               Nos temps de rassemblement
             </h2>
           </motion.div>
@@ -32,8 +34,8 @@ export default function Services() {
             variants={reveal}
             className="max-w-[46ch] font-body text-[15px] leading-tight text-ink-950/70 lg:justify-self-end lg:text-right"
           >
-            Chaque semaine, notre communauté se retrouve pour prier, apprendre et grandir
-            ensemble — que vous soyez de passage à Douala ou membre de longue date.
+            Chaque semaine, notre communauté se retrouve pour prier, communier et grandir
+            ensemble, que vous soyez de passage à Douala ou membre de longue date.
           </motion.p>
         </div>
 
@@ -55,22 +57,18 @@ export default function Services() {
                   dark ? "bg-bordeaux text-cream-50" : "bg-cream-200 text-ink-950"
                 }`}
               >
-                {!dark && (
-                  <>
-                    <img
-                      src={s.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-y-0 right-0 h-full w-3/4 object-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{
-                        maskImage:
-                          "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0.5) 38%, rgba(0,0,0,0.85) 55%, black 75%)",
-                        WebkitMaskImage:
-                          "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0.5) 38%, rgba(0,0,0,0.85) 55%, black 75%)",
-                      }}
-                    />
-                  </>
-                )}
+                <img
+                  src={s.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-y-0 right-0 h-full w-3/4 object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    maskImage:
+                      "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0.5) 38%, rgba(0,0,0,0.85) 55%, black 75%)",
+                    WebkitMaskImage:
+                      "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0.5) 38%, rgba(0,0,0,0.85) 55%, black 75%)",
+                  }}
+                />
                 <div className="relative flex h-full flex-col p-7 sm:p-9">
                   <MountainMark
                     className="h-8 w-8 transition-transform duration-500 group-hover:-translate-y-1"
@@ -97,6 +95,16 @@ export default function Services() {
               </motion.article>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/cultes"
+            className="inline-flex items-center gap-2 border-b border-bordeaux/40 pb-1 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-bordeaux transition-colors hover:border-bordeaux hover:text-bordeaux-700"
+          >
+            Voir le programme complet des cultes
+            <ArrowRight size={14} />
+          </Link>
         </div>
       </div>
     </section>
