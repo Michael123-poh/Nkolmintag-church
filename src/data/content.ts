@@ -157,7 +157,7 @@ export const socials = [
 export const pastor = {
   name: "Pasteur Branham Kamté",
   role: "Pasteur de l'église Nkolmintag",
-  image: "../src/assets/Screenshot 2026-09-28 194916.png",
+  image: "/src/assets/Screenshot 2026-09-28 194916.png",
 };
 
 export const aboutShort = {
