@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import PredicationsPage from "./pages/PredicationsPage";
 import CultesPage from "./pages/CultesPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/predications" element={<PredicationsPage />} />
           <Route path="/cultes" element={<CultesPage />} />
+          <Route path="/a-propos" element={<AboutPage />} />
         </Routes>
       </main>
       <Footer />

@@ -45,53 +45,55 @@ export default function Navbar() {
   const solid = scrolled || !isHome;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid
-          ? "bg-bordeaux/95 shadow-bordeaux-sm backdrop-blur-sm py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
-      <a href="#main" className="skip-link">
-        Aller au contenu principal
-      </a>
-      <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-3 text-cream-50">
-          <MountainMark className="h-9 w-9" color="#c9a24b" />
-          <span className="font-sans text-lg font-semibold tracking-wide">
-            NKT
-          </span>
-        </Link>
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          solid
+            ? "bg-bordeaux/95 shadow-bordeaux-sm backdrop-blur-sm py-3"
+            : "bg-transparent py-5"
+        }`}
+      >
+        <a href="#main" className="skip-link">
+          Aller au contenu principal
+        </a>
+        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6">
+          <Link to="/" className="flex items-center gap-3 text-cream-50">
+            <MountainMark className="h-9 w-9" color="#c9a24b" />
+            <span className="font-sans text-lg font-semibold tracking-wide">
+              NKT
+            </span>
+          </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {nav.map((item) => {
-            const isPageLink = !item.href.startsWith("#");
-            const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
-            const isCurrent = isPageLink
-              ? location.pathname === item.href
-              : isHome && active === item.href;
-            return (
-              <Link
-                key={item.href}
-                to={to}
-                aria-current={isCurrent ? "page" : undefined}
-                className="nav-underline font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-cream-100/90 transition-colors hover:text-gold-400"
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+          <nav className="hidden items-center gap-8 lg:flex">
+            {nav.map((item) => {
+              const isPageLink = !item.href.startsWith("#");
+              const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
+              const isCurrent = isPageLink
+                ? location.pathname === item.href
+                : isHome && active === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  to={to}
+                  aria-current={isCurrent ? "page" : undefined}
+                  className="nav-underline font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-cream-100/90 transition-colors hover:text-gold-400"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
 
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="text-cream-50 lg:hidden"
-          aria-label="Ouvrir le menu"
-        >
-          <Menu size={26} />
-        </button>
-      </div>
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="text-cream-50 lg:hidden"
+            aria-label="Ouvrir le menu"
+          >
+            <Menu size={26} />
+          </button>
+        </div>
+      </header>
 
       <AnimatePresence>
         {open && (
@@ -143,6 +145,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
