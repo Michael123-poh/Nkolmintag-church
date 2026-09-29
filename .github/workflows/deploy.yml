@@ -31,3 +31,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/ # Utilisez ./build/ si votre projet utilise Create React App
           server-dir: ./public_html/
+          
