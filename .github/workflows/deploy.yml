@@ -1,34 +1,59 @@
-name: Deploy React App to Hostinger
+# Construit le site à chaque modification sur "main" (y compris les
+# modifications faites depuis l'admin, qui créent un commit) et le
+# dépose sur Hostinger via FTP — le site principal d'un côté, l'admin
+# sur son sous-domaine de l'autre.
+#
+# Secrets à créer dans GitHub (Settings → Secrets and variables →
+# Actions → New repository secret) :
+#   FTP_SERVER            ex. ftp.votredomaine.cm (fourni par Hostinger)
+#   FTP_USERNAME           ex. u123456789
+#   FTP_PASSWORD
+#   FTP_SITE_DIR            dossier du site principal, ex. /public_html/
+#   FTP_ADMIN_DIR           dossier du sous-domaine admin, ex. /public_html/admin/
+# (Ces 5 valeurs sont à toi : je ne les vois jamais, elles restent
+# chiffrées dans GitHub.)
+
+name: Déployer sur Hostinger
 
 on:
   push:
-    branches:
-      - main # Changez en 'master' si votre branche principale s'appelle master
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: Récupérer le dépôt
         uses: actions/checkout@v4
 
-      - name: 🔧 Use Node.js
+      - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: 🔨 Install Dependencies & Build
-        run: |
-          npm ci
-          npm run build
+      - name: Installer les dépendances
+        run: npm ci
 
-      - name: 📂 Sync files via FTP
-        uses: SamKirsch/ftp-deploy-action@v4.3.5
+      - name: Construire le site
+        run: npm run build
+
+      - name: Déployer le site principal
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/ # Utilisez ./build/ si votre projet utilise Create React App
-          server-dir: ./public_html/
-          
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_SITE_DIR }}
+          exclude: |
+            **/admin/**
+
+      - name: Déployer l'admin sur son sous-domaine
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/admin/
+          server-dir: ${{ secrets.FTP_ADMIN_DIR }}
