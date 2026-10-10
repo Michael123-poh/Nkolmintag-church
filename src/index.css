@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bordeaux — couleur institutionnelle principale */
+  --color-bordeaux-950: #2a0a10;
+  --color-bordeaux-900: #3d0f18;
+  --color-bordeaux-800: #4f1420;
+  --color-bordeaux-700: #641a29;
+  --color-bordeaux-600: #7a2233;
+  --color-bordeaux: #5c1826;
+
+  /* Blanc cassé / beige — couleur secondaire chaleureuse */
+  --color-cream-50: #fefcf8;
+  --color-cream-100: #faf4e9;
+  --color-cream-200: #f3e9d4;
+  --color-cream-300: #e9d9bb;
+  --color-cream: #f6ecd9;
+
+  /* Or — accents discrets (déco, icônes, lignes) */
+  --color-gold-400: #c9a24b;
+  --color-gold-500: #b08a34;
+  --color-gold-600: #93701f;
+
+  /* Neutres chauds pour texte/bg sombres */
+  --color-ink-950: #17090c;
+  --color-ink-900: #1f0d11;
+
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Montserrat", "Helvetica Neue", sans-serif;
+  --font-body: "Lato", "Helvetica Neue", sans-serif;
+
+  --shadow-bordeaux: 0 20px 50px -15px rgb(92 24 38 / 0.45);
+  --shadow-bordeaux-sm: 0 8px 20px -8px rgb(92 24 38 / 0.35);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-cream-50);
+    color: var(--color-ink-950);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-bordeaux);
+    color: var(--color-cream-50);
+  }
+}
+
+@layer utilities {
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1.5px;
+    background: currentColor;
+    transition: width 0.25s ease;
+  }
+  .nav-underline:hover::after,
+  .nav-underline[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-cream-50);
+    color: var(--color-bordeaux);
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  /* Cartes à coin unique carré — style signature Nkolmintag */
+  .card-blob {
+    border-radius: 2.5rem;
+  }
+  .card-blob--tl {
+    border-top-left-radius: 0.5rem;
+  }
+  .card-blob--tr {
+    border-top-right-radius: 0.5rem;
+  }
+  .card-blob--br {
+    border-bottom-right-radius: 0.5rem;
+  }
+  .card-blob--bl {
+    border-bottom-left-radius: 0.5rem;
+  }
+}

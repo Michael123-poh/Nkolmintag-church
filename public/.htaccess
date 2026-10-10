@@ -1,0 +1,12 @@
+# Le site est une application React à une seule page : les adresses comme
+# /cultes ou /a-propos n'existent pas comme fichiers sur le serveur. Cette
+# règle renvoie ces adresses vers index.html pour que React affiche la
+# bonne page (sinon : erreur 404 quand on rafraîchit ou qu'on ouvre un lien).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
