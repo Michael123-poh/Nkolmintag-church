@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { hero, settings } from "../data/content";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -18,7 +19,7 @@ export default function Hero() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1200&fit=crop&q=80)` }}
+        style={{ backgroundImage: `url(${hero.backgroundImage})` }}
         aria-hidden="true"
       />
       <div
@@ -42,9 +43,9 @@ export default function Hero() {
           variants={fadeUp}
           className="max-w-[820px] font-display text-[2.5rem] font-semibold leading-[1.05] text-cream-50 sm:text-[3.4rem] lg:text-[4rem]"
         >
-          Bienvenue à Nkolmintag.
+          {hero.titleLine1}
           <br />
-          Unissez-vous à nous dans la foi.
+          {hero.titleLine2}
         </motion.h1>
 
         <motion.div
@@ -55,7 +56,9 @@ export default function Hero() {
           className="mt-6"
         >
           <a
-            href="#medias"
+            href={settings.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 border-b border-gold-400/60 pb-1 font-sans text-sm font-semibold uppercase tracking-[0.14em] text-cream-50 transition-colors hover:border-gold-400 hover:text-gold-400"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold-500/90 text-ink-950 transition-transform duration-300 group-hover:scale-110">
@@ -76,10 +79,7 @@ export default function Hero() {
             Ce dimanche
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
-            {[
-              { label: "Culte matinal", time: "10h" },
-              { label: "Culte du soir", time: "18h" },
-            ].map((s) => (
+            {hero.schedule.map((s) => (
               <div
                 key={s.label}
                 className="flex min-w-[180px] items-center gap-4 rounded-sm bg-cream-50/10 px-5 py-4 backdrop-blur-sm transition-colors hover:bg-cream-50/15"

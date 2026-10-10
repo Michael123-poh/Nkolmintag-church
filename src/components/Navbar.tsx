@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import MountainMark from "./MountainMark";
+import Logo from "./Logo";
 import { nav } from "../data/content";
 
 export default function Navbar() {
@@ -58,10 +58,7 @@ export default function Navbar() {
         </a>
         <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-3 text-cream-50">
-            <MountainMark className="h-9 w-9" color="#c9a24b" />
-            <span className="font-sans text-lg font-semibold tracking-wide">
-              NKT
-            </span>
+            <Logo />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -106,10 +103,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between px-6 py-5">
               <span className="flex items-center gap-3 text-cream-50">
-                <MountainMark className="h-8 w-8" color="#c9a24b" />
-                <span className="font-sans text-base font-semibold tracking-wide">
-                  NKT
-                </span>
+                <Logo iconClassName="h-8 w-8" textClassName="font-sans text-base font-semibold tracking-wide" />
               </span>
               <button
                 type="button"

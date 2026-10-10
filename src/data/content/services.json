@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Culte dominical",
+      "time": "Dimanche · 10h & 18h",
+      "description": "Un temps de louange, de prédication et de communion fraternelle ouvert à tous, quel que soit votre parcours de foi.",
+      "image": "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=640&h=480&fit=crop&q=80"
+    },
+    {
+      "title": "Écoute de bande",
+      "time": "Jeudi · 18h",
+      "description": "Nous écoutons le message du temps de la fin de William Marrion Branham, que le Seigneur nous a envoyé.",
+      "image": "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=480&fit=crop&q=80"
+    },
+    {
+      "title": "Groupe jeunesse",
+      "time": "Un samedi par mois · 15h",
+      "description": "Un espace d'énergie et d'engagement pour les 15-30 ans : louange, ateliers et projets communautaires.",
+      "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=640&h=480&fit=crop&q=80"
+    }
+  ]
+}

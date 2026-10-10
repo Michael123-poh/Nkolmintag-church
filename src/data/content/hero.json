@@ -1,0 +1,9 @@
+{
+  "titleLine1": "Bienvenue à Nkolmintag.",
+  "titleLine2": "Unissez-vous à nous dans la foi.",
+  "backgroundImage": "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1200&fit=crop&q=80",
+  "schedule": [
+    { "label": "Culte matinal", "time": "10h" },
+    { "label": "Culte du soir", "time": "18h" }
+  ]
+}

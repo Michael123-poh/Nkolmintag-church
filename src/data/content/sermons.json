@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "title": "Vivre la foi en temps de crise",
+      "speaker": "Pasteur Jean-Marc Ondoa",
+      "date": "27 juillet 2026",
+      "image": "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/vivre-la-foi-en-temps-de-crise.pdf"
+    },
+    {
+      "title": "L'espoir qui ne déçoit jamais",
+      "speaker": "Pasteure Chantal Mbezele",
+      "date": "20 juillet 2026",
+      "image": "https://images.unsplash.com/photo-1445445290350-18a3b86e0e5d?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/lespoir-qui-ne-decoit-jamais.pdf"
+    },
+    {
+      "title": "Bâtir sur le roc",
+      "speaker": "Pasteur Jean-Marc Ondoa",
+      "date": "13 juillet 2026",
+      "image": "https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/batir-sur-le-roc.pdf"
+    },
+    {
+      "title": "La grâce qui restaure",
+      "speaker": "Pasteure Chantal Mbezele",
+      "date": "6 juillet 2026",
+      "image": "https://images.unsplash.com/photo-1544427920-c49ccfb85579?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/la-grace-qui-restaure.pdf"
+    },
+    {
+      "title": "Marcher par la foi, non par la vue",
+      "speaker": "Pasteur Emmanuel Biya Essomba",
+      "date": "29 juin 2026",
+      "image": "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/marcher-par-la-foi-non-par-la-vue.pdf"
+    },
+    {
+      "title": "Le pardon qui libère",
+      "speaker": "Pasteur Jean-Marc Ondoa",
+      "date": "22 juin 2026",
+      "image": "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/le-pardon-qui-libere.pdf"
+    },
+    {
+      "title": "Servir avec un cœur reconnaissant",
+      "speaker": "Pasteure Chantal Mbezele",
+      "date": "15 juin 2026",
+      "image": "https://images.unsplash.com/photo-1523803326055-13445f07c8ed?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/servir-avec-un-coeur-reconnaissant.pdf"
+    },
+    {
+      "title": "La prière qui déplace les montagnes",
+      "speaker": "Pasteur Emmanuel Biya Essomba",
+      "date": "8 juin 2026",
+      "image": "https://images.unsplash.com/photo-1465310477141-6fb93167a273?w=640&h=400&fit=crop&q=80",
+      "pdfUrl": "/pdfs/la-priere-qui-deplace-les-montagnes.pdf"
+    }
+  ]
+}

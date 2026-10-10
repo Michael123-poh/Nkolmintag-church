@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "label": "Accueil",
+      "href": "#accueil"
+    },
+    {
+      "label": "À propos",
+      "href": "/a-propos"
+    },
+    {
+      "label": "Culte",
+      "href": "/cultes"
+    },
+    {
+      "label": "Médias",
+      "href": "#medias"
+    },
+    {
+      "label": "Nous rejoindre",
+      "href": "#rejoindre"
+    }
+  ]
+}

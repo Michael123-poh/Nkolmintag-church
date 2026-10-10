@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import MountainMark from "./MountainMark";
+import Logo from "./Logo";
 import { FacebookIcon, InstagramIcon, YoutubeIcon, WhatsAppIcon } from "./SocialIcons";
-import { contact, nav } from "../data/content";
+import { contact, nav, socials } from "../data/content";
 
-const socialIcons = [
-  { label: "Facebook", href: "https://facebook.com", Icon: FacebookIcon },
-  { label: "Instagram", href: "https://instagram.com", Icon: InstagramIcon },
-  { label: "YouTube", href: "https://youtube.com", Icon: YoutubeIcon },
-  { label: "WhatsApp", href: "https://wa.me/237699421758", Icon: WhatsAppIcon },
-];
+const iconByName: Record<string, typeof FacebookIcon> = {
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  youtube: YoutubeIcon,
+  whatsapp: WhatsAppIcon,
+};
+
+const socialIcons = socials.map((s) => ({ ...s, Icon: iconByName[s.icon] ?? FacebookIcon }));
 
 export default function Footer() {
   return (
@@ -18,8 +20,7 @@ export default function Footer() {
     >
       <div className="mx-auto flex w-full max-w-[1320px] flex-1 flex-col justify-center px-6">
         <div className="flex items-center gap-3 text-cream-50">
-          <MountainMark className="h-10 w-10" color="#c9a24b" />
-          <span className="font-sans text-xl font-semibold tracking-wide">NKT</span>
+          <Logo iconClassName="h-10 w-10" textClassName="font-sans text-xl font-semibold tracking-wide" />
         </div>
         <h2 className="mt-6 max-w-[16ch] font-display text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
           Restons en contact.

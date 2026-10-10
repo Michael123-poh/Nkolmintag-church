@@ -36,6 +36,9 @@ export default function AboutPage() {
                 L'Assemblée de Nkolmintag
               </h1>
             </div>
+            <p className="max-w-[40ch] border-l-2 border-gold-400 pl-5 font-body text-[15px] leading-relaxed text-ink-950/75 sm:text-base">
+              {aboutPage.standfirst}
+            </p>
           </div>
         </div>
       </section>

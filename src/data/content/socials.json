@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "icon": "facebook", "label": "Facebook", "href": "https://facebook.com" },
+    { "icon": "instagram", "label": "Instagram", "href": "https://instagram.com" },
+    { "icon": "youtube", "label": "YouTube", "href": "https://youtube.com" },
+    { "icon": "whatsapp", "label": "WhatsApp", "href": "https://wa.me/237699421758" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "month": "AVR",
+      "day": "11",
+      "title": "Conférence de Pâques Nkolmintag",
+      "description": "Trois jours de renouvellement spirituel avec des invités venus de Yaoundé et Douala."
+    },
+    {
+      "month": "AOÛT",
+      "day": "22",
+      "title": "Camp de jeunesse",
+      "description": "Camp d'été pour les 15-30 ans, au bord de la mer à Kribi. Inscriptions limitées à 80 places."
+    },
+    {
+      "month": "SEPT",
+      "day": "6",
+      "title": "Journée des familles",
+      "description": "Un dimanche dédié aux familles : activités pour enfants, repas partagé et témoignages."
+    },
+    {
+      "month": "OCT",
+      "day": "18",
+      "title": "Nuit de prière",
+      "description": "Une soirée entière consacrée à la prière et à la louange, ouverte à toute la communauté."
+    },
+    {
+      "month": "NOV",
+      "day": "8",
+      "title": "Séminaire des couples",
+      "description": "Un temps d'enseignement et d'échange pour renforcer les foyers, animé par des couples pasteurs invités."
+    },
+    {
+      "month": "DÉC",
+      "day": "20",
+      "title": "Veillée de Noël",
+      "description": "Célébration de Noël en musique avec la chorale, suivie d'un repas de fête pour toute la famille."
+    }
+  ]
+}
