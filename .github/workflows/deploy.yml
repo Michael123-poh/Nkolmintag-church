@@ -44,8 +44,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps      # connexion chiffrée ; si elle échoue, essaie : ftp
-          security: loose     # nécessaire car on se connecte par adresse IP
+          protocol: ftp       # FTP simple : le mode chiffré (ftps) coupe la connexion de données chez Hostinger
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_SITE_DIR }}
           exclude: |
@@ -57,7 +56,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps      # connexion chiffrée ; si elle échoue, essaie : ftp
-          security: loose     # nécessaire car on se connecte par adresse IP
+          protocol: ftp       # FTP simple : le mode chiffré (ftps) coupe la connexion de données chez Hostinger
           local-dir: ./dist/admin/
           server-dir: ${{ secrets.FTP_ADMIN_DIR }}
