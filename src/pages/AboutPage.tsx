@@ -36,7 +36,7 @@ export default function AboutPage() {
                 L'Assemblée de Nkolmintag
               </h1>
             </div>
-            <p className="max-w-[40ch] border-l-2 border-gold-400 pl-5 font-body text-[15px] leading-relaxed text-ink-950/75 sm:text-base">
+            <p className="max-w-[40ch] border-l-2 border-gold-400 pl-5 font-body text-[15px] leading-snug text-ink-950/75 sm:text-base">
               {aboutPage.standfirst}
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={reveal}
                 transition={{ delay: (i % 2) * 0.08 }}
-                className={`mb-5 break-inside-avoid font-body text-[15px] leading-relaxed text-ink-950/75 ${
+                className={`mb-5 break-inside-avoid font-body text-[15px] leading-snug text-ink-950/75 ${
                   i === 0 ? dropCap : ""
                 }`}
               >
@@ -140,12 +140,12 @@ export default function AboutPage() {
                 {pastor.name}
               </h2>
             </div>
-            <p className="max-w-[46ch] font-body text-[15px] leading-relaxed text-cream-100/80 lg:justify-self-end lg:text-right">
+            <p className="max-w-[46ch] font-body text-[15px] leading-snug text-cream-100/80 lg:justify-self-end lg:text-right">
               {pastor.role} — appelé au ministère en 2003, installé le 31 mars 2024.
             </p>
           </motion.div>
 
-          <div className="mt-10 max-w-[80ch] space-y-5 border-t border-cream-50/15 pt-8 font-body text-[15px] leading-relaxed text-cream-100/85">
+          <div className="mt-10 max-w-[80ch] space-y-5 border-t border-cream-50/15 pt-8 font-body text-[15px] leading-snug text-cream-100/85">
             {aboutPage.pastorBio.map((p, i) => (
               <motion.p
                 key={i}
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 D'une maison de prière à une communauté
               </h2>
             </div>
-            <p className="max-w-[46ch] font-body text-[15px] leading-relaxed text-ink-950/70 lg:justify-self-end lg:text-right">
+            <p className="max-w-[46ch] font-body text-[15px] leading-snug text-ink-950/70 lg:justify-self-end lg:text-right">
               De l'arrivée du Message au Cameroun à aujourd'hui : six chapitres d'une même
               fidélité.
             </p>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                     {c.title}
                   </h3>
                 </div>
-                <p className="max-w-[60ch] font-body text-[15px] leading-relaxed text-ink-950/70">
+                <p className="max-w-[60ch] font-body text-[15px] leading-snug text-ink-950/70">
                   {c.text}
                 </p>
               </motion.div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
               <h3 className="font-display text-2xl font-semibold sm:text-[1.7rem]">
                 Le Conseil des diacres
               </h3>
-              <p className="mt-4 max-w-[52ch] font-body text-[15px] leading-relaxed text-cream-100/80">
+              <p className="mt-4 max-w-[52ch] font-body text-[15px] leading-snug text-cream-100/80">
                 {aboutPage.deacons.intro}
               </p>
 
@@ -291,7 +291,7 @@ export default function AboutPage() {
               <p className="mt-1 font-body text-sm italic text-cream-100/60">
                 « L'église de demain »
               </p>
-              <p className="mt-4 max-w-[52ch] font-body text-[15px] leading-relaxed text-cream-100/80">
+              <p className="mt-4 max-w-[52ch] font-body text-[15px] leading-snug text-cream-100/80">
                 {aboutPage.sundaySchool.intro}
               </p>
 
@@ -305,15 +305,15 @@ export default function AboutPage() {
                     <p className="font-sans text-xs font-semibold uppercase tracking-[0.1em] text-gold-400">
                       {c.age}
                     </p>
-                    <p className="font-body text-sm leading-relaxed text-cream-100/80">{c.text}</p>
+                    <p className="font-body text-sm leading-snug text-cream-100/80">{c.text}</p>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-6 font-body text-sm leading-relaxed text-cream-100/70">
+              <p className="mt-6 font-body text-sm leading-snug text-cream-100/70">
                 {aboutPage.sundaySchool.stats}
               </p>
-              <p className="mt-4 font-body text-sm leading-relaxed text-cream-100/80">
+              <p className="mt-4 font-body text-sm leading-snug text-cream-100/80">
                 <span className="font-display text-base font-semibold text-cream-50">
                   {aboutPage.sundaySchool.director}
                 </span>{" "}

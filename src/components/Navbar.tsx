@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { nav } from "../data/content";
+import { linkProps } from "../lib/sectionLink";
 
 export default function Navbar() {
   const location = useLocation();
@@ -64,14 +65,13 @@ export default function Navbar() {
           <nav className="hidden items-center gap-8 lg:flex">
             {nav.map((item) => {
               const isPageLink = !item.href.startsWith("#");
-              const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
               const isCurrent = isPageLink
                 ? location.pathname === item.href
                 : isHome && active === item.href;
               return (
                 <Link
                   key={item.href}
-                  to={to}
+                  {...linkProps(item.href)}
                   aria-current={isCurrent ? "page" : undefined}
                   className="nav-underline font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-cream-100/90 transition-colors hover:text-gold-400"
                 >
@@ -116,8 +116,6 @@ export default function Navbar() {
             </div>
             <nav className="flex flex-1 flex-col items-start justify-center gap-8 px-10">
               {nav.map((item, i) => {
-                const isPageLink = !item.href.startsWith("#");
-                const to = isPageLink ? item.href : isHome ? item.href : `/${item.href}`;
                 return (
                   <motion.div
                     key={item.href}
@@ -126,7 +124,7 @@ export default function Navbar() {
                     transition={{ delay: 0.05 * i, duration: 0.3 }}
                   >
                     <Link
-                      to={to}
+                      {...linkProps(item.href)}
                       onClick={() => setOpen(false)}
                       className="font-display text-3xl text-cream-50 hover:text-gold-400"
                     >

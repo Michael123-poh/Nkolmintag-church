@@ -81,13 +81,13 @@ export default function Media() {
                 Voir toutes les prédications
                 <ArrowRight size={14} />
               </Link>
-              <a
-                href="#"
+              <button
+                type="button"
                 className="inline-flex items-center gap-2 self-start border-b border-gold-400/60 pb-1 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-gold-400 transition-colors hover:border-gold-400 hover:text-cream-50"
               >
                 <Download size={14} />
                 Télécharger le guide d'étude (PDF)
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>

@@ -50,7 +50,7 @@ export default function CultesPage() {
           <h1 className="mt-2 max-w-[20ch] font-display text-4xl font-semibold leading-[1.05] text-ink-950 sm:text-5xl lg:text-6xl">
             Nos cultes & nos rencontres
           </h1>
-          <p className="mt-4 max-w-[58ch] font-body text-[15px] leading-relaxed text-ink-950/70">
+          <p className="mt-4 max-w-[58ch] font-body text-[15px] leading-snug text-ink-950/70">
             Chaque semaine, notre communauté se retrouve pour prier, communier et grandir
             ensemble. Retrouvez ici nos jours de rassemblement et réécoutez les messages qui y
             sont partagés.
@@ -94,7 +94,7 @@ export default function CultesPage() {
                   </h3>
                 </div>
                 <p className="font-display text-xl text-bordeaux sm:text-2xl">{s.time}</p>
-                <p className="max-w-[48ch] font-body text-[15px] leading-relaxed text-ink-950/70">
+                <p className="max-w-[48ch] font-body text-[15px] leading-snug text-ink-950/70">
                   {s.description}
                 </p>
               </motion.div>
@@ -121,7 +121,7 @@ export default function CultesPage() {
                 Toutes les prédications
               </h2>
             </div>
-            <p className="max-w-[46ch] font-body text-[15px] leading-relaxed text-cream-100/80 lg:justify-self-end lg:text-right">
+            <p className="max-w-[46ch] font-body text-[15px] leading-snug text-cream-100/80 lg:justify-self-end lg:text-right">
               Réécoutez chaque message ou téléchargez-le en PDF pour le méditer, le partager ou
               le retrouver hors ligne.
             </p>

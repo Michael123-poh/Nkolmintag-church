@@ -47,7 +47,7 @@ export default function About() {
             {aboutShort.title}
           </h2>
 
-          <div className="mt-6 max-w-[54ch] space-y-4 font-body text-[15px] leading-relaxed text-ink-950/75">
+          <div className="mt-6 max-w-[54ch] space-y-4 font-body text-[15px] leading-snug text-ink-950/75">
             <p>{aboutShort.mission}</p>
             <p>{aboutShort.doctrine}</p>
           </div>

@@ -8,13 +8,14 @@ import Events from "../components/Events";
 import Join from "../components/Join";
 
 export default function HomePage() {
-  const { hash } = useLocation();
+  const { state, key } = useLocation();
+  const target = (state as { scrollTo?: string } | null)?.scrollTo;
 
   useEffect(() => {
-    if (!hash) return;
-    const el = document.querySelector(hash);
+    if (!target) return;
+    const el = document.querySelector(target);
     el?.scrollIntoView({ behavior: "smooth" });
-  }, [hash]);
+  }, [target, key]);
 
   return (
     <>

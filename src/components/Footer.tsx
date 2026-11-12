@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { FacebookIcon, InstagramIcon, YoutubeIcon, WhatsAppIcon } from "./SocialIcons";
 import { contact, nav, socials } from "../data/content";
+import { linkProps } from "../lib/sectionLink";
 
 const iconByName: Record<string, typeof FacebookIcon> = {
   facebook: FacebookIcon,
@@ -42,7 +43,7 @@ export default function Footer() {
               {nav.map((n) => (
                 <li key={n.href}>
                   <Link
-                    to={n.href.startsWith("#") ? `/${n.href}` : n.href}
+                    {...linkProps(n.href)}
                     className="font-body text-sm transition-colors hover:text-cream-50"
                   >
                     {n.label}
@@ -96,12 +97,12 @@ export default function Footer() {
         <div className="mx-auto flex w-full max-w-[1320px] flex-col items-center justify-between gap-3 px-6 py-6 font-body text-xs text-cream-100/50 sm:flex-row">
           <p>© 2026 Église Nkolmintag. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-cream-50">
+            <button type="button" className="transition-colors hover:text-cream-50">
               Politique de confidentialité
-            </a>
-            <a href="#" className="transition-colors hover:text-cream-50">
+            </button>
+            <button type="button" className="transition-colors hover:text-cream-50">
               Conditions d'utilisation
-            </a>
+            </button>
           </div>
         </div>
       </div>
